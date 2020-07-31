@@ -8,31 +8,18 @@ body {
   margin: 0;
   text-align: center;
 }
-6{
+h2,h6{
   background-color: gray;
   color: white;
   font-size: 1.8 em;
   ext-align: center;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
+
 summary {
   display: block;
 }
-audio,
-canvas,
-progress,
+
 video {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
@@ -41,7 +28,6 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-[hidden],
 template {
   display: none;
 }
@@ -62,10 +48,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 mark {
   background: #ff0;
   color: #000;
@@ -80,9 +62,7 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
-sup {
-  top: -0.5em;
-}
+
 sub {
   bottom: -0.25em;
 }
@@ -103,17 +83,12 @@ hr {
 pre {
   overflow: auto;
 }
-code,
-kbd,
-pre,
+
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
-button,
-input,
-optgroup,
-select,
+
 textarea {
   color: inherit; /* 1 */
   font: inherit; /* 2 */
@@ -126,14 +101,7 @@ button,
 select {
   text-transform: none;
 }
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
-button[disabled],
+b
 html input[disabled] {
   cursor: default;
 }
@@ -214,28 +182,7 @@ body {
     font-size: 16px;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  line-height: 1.5;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 20px 0 15px;
-}
-h1 {
-  font-size: 22px;
-}
+
 @media (max-width: 767px) {
   h1 {
     font-size: 18px;
