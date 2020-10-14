@@ -51,7 +51,146 @@
 						<div class="content">
 							<p><strong>Python爬虫</strong>我选定了一个网站进行爬取。下面是代码部分类容</p>
 							<a href="https://www.bilibili.com/read/cv7736516" class="landscape"><img src="images/gallery/thumbs/99.png" alt="" /></a>
-							
+							<textarea name="textarea" cols="40" rows="6" style="background-color: aqua;">
+import os
+
+import requests
+
+import lxml
+
+from lxml import etree
+
+
+
+Kinds = "dongman"
+
+
+
+Down_way = "D://壁纸//"+Kinds+"//"
+
+
+
+
+
+def down_index(start,stop):
+
+    if start == 1:
+
+        r = requests.get("http://netbian.com/"+Kinds)
+
+        html = etree.HTML(r.text)
+
+        result_index = html.xpath('//a[@target="_blank"]')
+
+        times = 0
+
+        for in_url in result_index:
+
+            if 14"<"times"<"17 or 18"<"times"<"36:    #去掉“
+
+                save_pic(etree.tostring(in_url).decode('utf-8')[15:20])
+
+            times += 1
+
+            if times==36:
+
+                break
+
+        print("+++++++++++++++++++++++++++Funish |-1-|++++++++++++++++++++++++")
+
+        start = 2
+
+        
+
+    for Index in range(start,stop+1):
+
+        r = requests.get("http://netbian.com/"+Kinds+"/index_{}.htm".format(Index))
+
+        html = etree.HTML(r.text)
+
+        result_index = html.xpath('//a[@target="_blank"]')
+
+        times = 0
+
+        for in_url in result_index:
+
+            if 14"<"times"<"17 or 18"<"times"<"36:     #去掉”
+
+                save_pic(etree.tostring(in_url).decode('utf-8')[15:20])
+
+            times += 1
+
+            if times==36:
+
+                break
+
+        print("++++++++++++++++++++++++++++Funish|-{}-|++++++++++++++++++++++++".format(Index))
+
+
+
+def save_pic(number):
+
+    r = requests.get("http://netbian.com/desk/{}.htm".format(number))
+
+    html = etree.HTML(r.text)
+
+    re_pic = html.xpath('//div[@class="pic"]')
+
+    
+
+    for p_url in re_pic:
+
+        url2 = etree.tostring(p_url).decode('utf-8')[82:156]
+
+        r = requests.get(url2)
+
+        p = Down_way + str(number) + ".jpg"
+
+        
+
+        print(p)
+
+        if not os.path.exists(p):
+
+            with open(p,'wb') as f:
+
+                f.write(r.content)
+
+                f.close()
+
+def main():
+
+    print("图片输出地址"+Down_way)
+
+    if not os.path.exists(Down_way):
+
+        os.mkdir(Down_way)
+
+    try:
+
+        start = eval(input("请输入起始页(默认1)："))
+
+    except:
+
+        start = 1
+
+    try:
+
+        stop = eval(input("请输入结束页(默认3)："))
+
+    except:
+
+        stop = 3
+
+    down_index(start,stop)
+
+    print("==========================全部图片已下载========================")
+
+
+
+main()
+
+							</textarea>
 								<p>先引用lxml库，通过lxml库可对HTML标签内容进行进行精准筛选，在对网页类容进行处理；这样的优势是可进行大量重复性标签处理，跟据网站类容变化种类，即可让全站资源快速缓存到自己的设备上了。</p>
 						</div>
 					</section>
