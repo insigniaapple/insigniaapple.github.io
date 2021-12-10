@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		
+
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -18,7 +20,7 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1 href="https://realyao.gitee.io/mikutap">蓝·藏</h1>
+							<h1 >蓝·藏</h1>
 							<p>No fair, 谎言堆砌现实 by <a href="https://www.zhihu.com/people/InsiApple">书奕ing</a></p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
@@ -51,7 +53,7 @@
 						<div class="content">
 							<p><strong>Python爬虫</strong>代码在下</p>
 							<a href="https://space.bilibili.com/176871194" class="landscape"><img src="images/gallery/thumbs/99.png" alt="" /></a><br>
-							<a hred="https://insigniaapple.github.io/assets/spider.txt">代码</a>
+							<a href="https://insigniaapple.github.io/assets/spider.txt">代码</a>
 						</div>
 					</section>
 				
@@ -436,7 +438,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 						var minSize = 15; //最小字体
 						var maxSize = 30;//最大字体
 						var newOne = 600; //生成雪花间隔
-						var flakColor = "#1bd3ff"; //雪花颜色
+						var flakColor = "#49fcd4"; //雪花颜色
 						var flak = $("<div></div>").css({position:"absolute","top":"0px"}).html("❉");//定义一个雪花
 						var dhight = $(window).height(); //定义视图高度
 						var dw =$(window).width()-80; //定义视图宽度
@@ -462,5 +464,34 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 						},newOne);
 					    }
 	               </script>
+			<!--音乐，只在PC端宽度>1000px时显示-->
+					<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.css">
+					<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="7114186501" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
+					<script src="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.js"></script>
+					<script src="https://blog-static.cnblogs.com/files/miluluyo/Meting.min.js"></script>
+
+					<script> 
+					let ref = setInterval(function(){
+						isaplay();
+					},2000);
+					function isaplay(){
+						if($(".aplayer-play").length == 1){
+							$(".aplayer-play").click()
+							clearInterval(ref);
+						}
+					}
+					</script>
+		<!-- 背景动画 -->
+						<canvas id="c_n9" width="1920" height="990"
+							style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+						<script src="https://blog-static.cnblogs.com/files/cyuanwu/canvas-nest.min.js"></script>
+
+					<script type="text/javascript" language="javascript">
+					　　//Setting ico for cnblogs
+					　　var linkObject = document.createElement('link');
+					　　linkObject.rel = "shortcut icon";
+					　　linkObject.href = "https://gitee.com/dbnuo/Cnblogs-Theme-SimpleMemory/raw/master/img/blog_logo.gif";
+					　　document.getElementsByTagName("head")[0].appendChild(linkObject);
+					</script>
 	</body>
 </html>
