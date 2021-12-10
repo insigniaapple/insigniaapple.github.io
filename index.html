@@ -388,7 +388,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 							<h2>了解更多</h2>
 						</header>
 						<div class="content">
-							<p><strong>评论or建议</strong> 自由的发表对于此博客的不同观点和看法吧！</p>
+							<p><strong>评论or建议</strong> 欢迎评论！</p>
 							<form>
 								<div class="fields">
 									<div class="field half">
@@ -427,43 +427,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-                        <script type="text/javascript">
-				   window.onload = function () {
-						var minSize = 15; //最小字体
-						var maxSize = 30;//最大字体
-						var newOne = 600; //生成雪花间隔
-						var flakColor = "#49fcd4"; //雪花颜色
-						var flak = $("<div></div>").css({position:"absolute","top":"0px"}).html("❉");//定义一个雪花
-						var dhight = $(window).height(); //定义视图高度
-						var dw =$(window).width()-80; //定义视图宽度
-						setInterval(function(){
-						var sizeflak = minSize+Math.random()*maxSize; //产生大小不等的雪花
-						var startLeft = Math.random()*dw; //雪花生成是随机的left值
-						var startOpacity = 0.7+Math.random()*0.3; //随机透明度
-						var endTop= dhight-100; //雪花停止top的位置
-						var endLeft= Math.random()*dw; //雪花停止的left位置
-						var durationfull = 5000+Math.random()*3000; //雪花飘落速度不同
-						flak.clone().appendTo($("body")).css({
-						"left":startLeft ,
-						"opacity":startOpacity,
-						"font-size":sizeflak,
-						"color":flakColor
-						}).animate({
-						"top":endTop,
-						"left":endLeft,
-						"apacity":0.1
-						},durationfull,function(){
-						$(this).remove()
-						});
-						},newOne);
-					    }
-	               </script>
+			
 			<!--音乐，只在PC端宽度>1000px时显示-->
 					<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/miluluyo/APlayer.min.css">
 					<div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="7114186501" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>
